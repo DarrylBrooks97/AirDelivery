@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  padding: 5rem;
+}
+
+.request {
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #c8c8c8;
+  margin: 2rem;
+}
