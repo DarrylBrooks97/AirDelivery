@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
+import UserInput from "./Components/user-input";
 function App() {
   return (
     <div className="App">
@@ -18,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <UserInput></UserInput>
       </header>
     </div>
   );
