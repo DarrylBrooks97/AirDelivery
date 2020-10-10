@@ -1,32 +1,61 @@
-import React from "react";
-import { requests } from "../datalayer";
+import React, { useState } from "react";
+import { userSubmit } from "../datalayer";
+import { TextField, Button, InputLabel } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import EventSeatIcon from "@material-ui/icons/EventSeat";
 
-class UserInput extends React.Component {
-  Submit = (e) => {
-    const userRequest = new requests();
-    var request = document.getElementById("request").value;
-    var seat = document.getElementById("seat").value;
+const useStyles = makeStyles((theme) => ({
+  margin: {
+    margin: theme.spacing(3),
+    maxWidth: "50vw",
+  },
+}));
 
+function UserInput() {
+  const [seat, setSeat] = useState("");
+  const [request, setRequest] = useState("");
+
+  const submit = () => {
     if (request.length === 0 || seat.length === 0) {
       alert("Fill in all information");
       return;
     }
 
-    userRequest.userSubmit(request, seat);
-    e.preventDefault();
+    userSubmit(request, seat);
   };
 
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.Submit}>
-          <input placeholder="Seat Number" id="seat"></input>
-          <input placeholder="Request" id="request"></input>
-          <input type="submit"></input>
-        </form>
-      </div>
-    );
-  }
+  const classes = useStyles();
+  return (
+    <>
+      <TextField
+        className={classes.margin}
+        id="input-with-icon-textfield"
+        label="Seat"
+        onChange={(e) => setSeat(e.target.value)}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <EventSeatIcon />
+            </InputAdornment>
+          ),
+        }}
+        inputProps={{ maxLength: 3 }}
+      />
+      <TextField
+        id="outlined-multiline-static"
+        label="What's your request?"
+        multiline
+        rows={4}
+        placeholder="Can I get some water?"
+        variant="outlined"
+        onChange={(e) => setRequest(e.target.value)}
+      />
+      <Button onClick={submit} variant="contained" color="primary">
+        Submit
+      </Button>
+    </>
+  );
 }
 
 export default UserInput;

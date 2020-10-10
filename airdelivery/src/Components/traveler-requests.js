@@ -1,35 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { requests } from "../datalayer";
-
+import { getNewRequests } from "../datalayer";
+import "../App.css";
 function TravelRequestsPage() {
   const [requestList, setRequestList] = useState([]);
 
   useEffect(() => {
-    let requestArr = [];
-    async function getRequests() {
-      const request = new requests();
-      let querySnapshot = await request.getNewRequests();
-      querySnapshot.forEach(function (doc) {
-        if (doc.data().created !== undefined) {
-          requestArr.push([
-            doc.id,
-            doc.data().created,
-            doc.data().request,
-            doc.data().seat,
-          ]);
-        }
-      });
-      setRequestList(requestArr);
-    }
-    getRequests();
+    getNewRequests(setRequestList);
   }, []);
 
   return (
     <div>
       <div>
-        {requestList.map((request, key) => (
+        {requestList?.map(({ request }, idx) => (
           // Create Flight Attendant Component
-          <div key={key}>{request[3]}</div>
+          <div className="request" key={idx}>
+            {request}
+          </div>
         ))}
       </div>
     </div>
