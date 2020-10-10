@@ -1,4 +1,5 @@
-.App {
+.App,
+.admin {
   text-align: center;
   display: flex;
   width: 100vw;
@@ -6,10 +7,45 @@
   flex-direction: column;
   padding: 5rem;
 }
-
+.american {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  color: white;
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.header {
+  position: relative;
+  height: 30vh;
+  width: 100vw;
+  background: linear-gradient(to right, #ff0707, #2177db);
+  text-align: left;
+}
 .request {
   padding: 14px;
   border-radius: 8px;
   box-shadow: 0 0 10px #c8c8c8;
   margin: 2rem;
+}
+.request-content {
+  margin-top: 12px;
+  text-align: center;
+}
+.request-status {
+  text-align: center;
+}
+.request-headline {
+  margin-top: 12px;
+  padding: 5px;
+  text-align: center;
+}
+.status {
+  padding: 4px 12px;
+  background-color: #eeeeee;
+  border-radius: 2px;
+}
+.show {
+  background-color: green;
+  color: white;
 }
