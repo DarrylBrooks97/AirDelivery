@@ -8,14 +8,13 @@ import EventSeatIcon from "@material-ui/icons/EventSeat";
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(3),
-    maxWidth: "50vw",
+    marginBottom: "2rem",
   },
 }));
 
 function UserInput() {
   const [seat, setSeat] = useState("");
   const [request, setRequest] = useState("");
-
   const submit = () => {
     if (request.length === 0 || seat.length === 0) {
       alert("Fill in all information");
@@ -32,6 +31,8 @@ function UserInput() {
         className={classes.margin}
         id="input-with-icon-textfield"
         label="Seat"
+        placeholder="12A"
+        variant="outlined"
         onChange={(e) => setSeat(e.target.value)}
         InputProps={{
           startAdornment: (
@@ -43,15 +44,24 @@ function UserInput() {
         inputProps={{ maxLength: 3 }}
       />
       <TextField
+        className={classes.margin}
         id="outlined-multiline-static"
         label="What's your request?"
         multiline
         rows={4}
+        style={{
+          width: "14rem",
+        }}
         placeholder="Can I get some water?"
         variant="outlined"
         onChange={(e) => setRequest(e.target.value)}
       />
-      <Button onClick={submit} variant="contained" color="primary">
+      <Button
+        style={{ width: "14rem", height: "3rem" }}
+        onClick={submit}
+        variant="contained"
+        color="primary"
+      >
         Submit
       </Button>
     </>
