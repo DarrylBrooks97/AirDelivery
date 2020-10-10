@@ -1,5 +1,6 @@
 import { db } from "./firebase";
 import firebase from "firebase";
+
 class requests {
   userSubmit(content, seatNumber) {
     db.collection("requests")
@@ -14,6 +15,10 @@ class requests {
       .catch(() => {
         alert("Failed");
       });
+  }
+
+  getNewRequests() {
+    return db.collection("requests").get();
   }
 }
 

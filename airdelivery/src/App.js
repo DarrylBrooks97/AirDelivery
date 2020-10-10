@@ -2,6 +2,8 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import UserInput from "./Components/user-input";
+import TravelRequestsPage from "./Components/traveler-requests";
+
 function App() {
   return (
     <div className="App">
@@ -18,7 +20,8 @@ function App() {
         >
           Learn React
         </a>
-        <UserInput></UserInput>
+        <UserInput />
+        <TravelRequestsPage />
       </header>
     </div>
   );
