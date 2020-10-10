@@ -5,7 +5,12 @@ import UserInput from "./Components/user-input";
 function Home() {
   return (
     <div className="App">
-      <UserInput />
+      <div className="header">
+        <div className="american">American</div>
+      </div>
+      <div className="content">
+        <UserInput />
+      </div>
     </div>
   );
 }
