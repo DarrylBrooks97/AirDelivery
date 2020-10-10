@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { userSubmit } from "../datalayer";
-import { TextField, Button, InputLabel } from "@material-ui/core";
+import { TextField, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import EventSeatIcon from "@material-ui/icons/EventSeat";
