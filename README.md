@@ -36,10 +36,6 @@ The following **required** functionality is completed:
 - [ ] User can purchase their food
 - [ ] User enter their card Information
 
-The following **additional** features are implemented:
-
-- [ ]
-
 ## Wireframe
 
 Here's a Wireframe of implemented user stories:
