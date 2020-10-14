@@ -1,29 +1,34 @@
 # APP - _AirDelivery App_
 
+## Website Links
+
+## Requests Page
+<a href="https://air-delivery.netlify.app/" target="_blank">Request Link</a>
+
+## Flight Attendent's Request Screen
+<a href="https://5f866abe4e46590007c12ff1--air-delivery.netlify.app/" target="_blank">Flight Attendent<a/>
+
 ## Overview
 
-Description
+## Description
 
-**AirDelivery** American Airlines travelers have the issue of not having a centralized place for making requests to flight attendants, in effect, the travelers have to wait at an interval amount of time to be able to place a request. These travelers also never know what's on the flight's amenities, this will also help slow the transmission of diseases.
+American Airlines travelers have the issue of not having a centralized place for making requests to flight attendants, in effect, the travelers have to wait at an interval amount of time to be able to place a request. These travelers also never know what's on the flight's amenities, this will also help slow the transmission of diseases.
 
-Goal
+## Goal
 
-**AirDelivery** To have a centralized app for travelers to queue in requests for flight attendants, ultimately leading to a better traveling experience.
+To have a centralized app for travelers to queue in requests for flight attendants, ultimately leading to a better traveling experience.
 
-App Evaluation
+## App Evaluation
 
-• Category: Travel Utility App
+- Category: Travel Utility App
 
-• Mobile: This app would be primarily developed for mobile but would perhaps be just as viable on a computer. Functionality wouldn't be limited to mobile devices, however mobile version could potentially have more features.
+- Mobile: This app would be primarily developed for mobile but would perhaps be just as viable on a computer. Functionality wouldn't be limited to mobile devices, however mobile version could potentially have more features.
 
-• Story: Users can send a request to the flight attendant.
-Flight attendants will be able to see the incoming requests.
+- Story: 
+  - Users can send a request to the flight attendant.
+  - Flight attendants will be able to see the incoming requests.
 
-• Market: Any individual between the age of 14 and older could choose to use this app,
-
-• Habit: This app could be used as often or unoften as the user wanted when they are flying to American Airlines
-
-Time spent: **24** hours spent in total
+- Market: Any individual between the age of 14 and older could choose to use this app
 
 ## User Stories
 
