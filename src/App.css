@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+.american {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  color: white;
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.content {
+  padding: 3em;
+}
+.header {
+  position: relative;
+  height: 30%;
+  width: 100%;
+  background: linear-gradient(to right, #ff0707, #2177db);
+  text-align: left;
+}
+.request {
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #c8c8c8;
+  margin: 2rem;
+}
