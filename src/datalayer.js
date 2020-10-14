@@ -7,6 +7,7 @@ function userSubmit(content, seatNumber) {
       created: firebase.firestore.FieldValue.serverTimestamp(),
       request: content,
       seat: seatNumber,
+      approved: false,
     })
     .then(() => {
       alert("Success!");
@@ -15,22 +16,32 @@ function userSubmit(content, seatNumber) {
       alert("Failed");
     });
 }
+function approvedRequest(id) {
+  var requestRef = db.collection("requests").doc(id);
+  // Set the "capital" field of the city 'DC'
+  return requestRef
+    .update({
+      approved: true,
+    })
+    .then(function () {
+      console.log("Document successfully updated!");
+    })
+    .catch(function (error) {
+      // The document probably doesn't exist.
+      console.error("Error updating document: ", error);
+    });
+}
 
 function getNewRequests(callback) {
   db.collection("requests")
     .orderBy("created", "desc")
-    // .onSnapshot()
     .onSnapshot(function (querySnapshot) {
       var data = [];
       querySnapshot.forEach(function (doc) {
-        data.push(doc.data());
+        data.push({ ...doc.data(), id: doc.id });
       });
-      console.log({ data });
       callback(data);
     });
-  // .catch(function (error) {
-  //   console.log("Error getting documents: ", error);
-  // });
 }
 
-export { userSubmit, getNewRequests };
+export { userSubmit, getNewRequests, approvedRequest };
