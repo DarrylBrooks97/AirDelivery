@@ -2,11 +2,11 @@
 
 ## Website Links
 
-## Requests Page
-<a href="https://air-delivery.netlify.app/" target="_blank">Request Link</a>
+### Requests Page
+<a href="https://air-delivery.netlify.app/" target="_blank">Link</a>
 
-## Flight Attendent's Request Screen
-<a href="https://5f866abe4e46590007c12ff1--air-delivery.netlify.app/" target="_blank">Flight Attendent<a/>
+### Flight Attendent's Request Screen
+<a href="https://5f866abe4e46590007c12ff1--air-delivery.netlify.app/" target="_blank">Link<a/>
 
 ## Overview
 
